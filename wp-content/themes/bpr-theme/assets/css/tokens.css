@@ -1,0 +1,78 @@
+:root {
+    /* === RATING PLATFORM PALETTE === */
+    --clr-bg: #09090B;
+    --clr-surface: #18181B;
+    --clr-surface-hover: #27272A;
+    --clr-surface-raised: #1F1F23;
+    --clr-border: #2E2E33;
+    --clr-border-active: #52525B;
+
+    --clr-gold: #FBBF24;
+    --clr-gold-bright: #FCD34D;
+    --clr-gold-dark: #D97706;
+    --clr-white: #FAFAFA;
+    --clr-text: #E4E4E7;
+    --clr-text-muted: #A1A1AA;
+    --clr-text-dim: #71717A;
+    --clr-green: #22C55E;
+    --clr-green-bg: rgba(34,197,94,0.1);
+    --clr-red: #EF4444;
+    --clr-red-bg: rgba(239,68,68,0.1);
+    --clr-blue: #3B82F6;
+    --clr-blue-bg: rgba(59,130,246,0.1);
+    --clr-purple: #A855F7;
+    --clr-orange: #F97316;
+
+    /* Score tier colors */
+    --clr-tier-excellent: #22C55E;
+    --clr-tier-good: #84CC16;
+    --clr-tier-average: #FBBF24;
+    --clr-tier-poor: #F97316;
+    --clr-tier-bad: #EF4444;
+
+    /* Typography — Poppins for headings (geometric, modern), DM Sans for body */
+    --ff-heading: 'Poppins', system-ui, sans-serif;
+    --ff-body: 'DM Sans', system-ui, sans-serif;
+    --ff-mono: 'JetBrains Mono', monospace;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+    --fs-xs: 0.6875rem;
+    --fs-sm: 0.8125rem;
+    --fs-base: 0.9375rem;
+    --fs-lg: 1.0625rem;
+    --fs-xl: 1.25rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 2rem;
+    --fs-4xl: 2.5rem;
+    --fs-5xl: 3.25rem;
+    --fs-6xl: 4rem;
+
+    /* Spacing — 4px base */
+    --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px;
+    --sp-4: 16px; --sp-5: 20px; --sp-6: 24px;
+    --sp-8: 32px; --sp-10: 40px; --sp-12: 48px;
+    --sp-16: 64px; --sp-20: 80px; --sp-24: 96px;
+
+    /* Layout */
+    --max-w: 1180px;
+    --max-w-narrow: 720px;
+    --gutter: 20px;
+
+    /* Radius & Shadow */
+    --r-sm: 4px;
+    --r-md: 8px;
+    --r-lg: 12px;
+    --r-xl: 16px;
+    --r-2xl: 24px;
+    --r-full: 9999px;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.4), 0 0 0 1px var(--clr-border);
+    --shadow-hover: 0 8px 24px rgba(0,0,0,0.5), 0 0 0 1px var(--clr-gold);
+    --shadow-glow-gold: 0 0 30px rgba(251,191,36,0.12);
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --dur: 200ms;
+}
