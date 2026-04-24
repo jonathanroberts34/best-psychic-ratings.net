@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+
+<header class="hdr">
+    <div class="wrap">
+        <div class="hdr__inner">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="hdr__brand">
+                <span class="hdr__star"><?php echo bpr_icon( 'star' ); ?></span>
+                <?php bloginfo( 'name' ); ?>
+            </a>
+
+            <button class="hdr__toggle" aria-label="Menu" aria-expanded="false">
+                <span class="hdr__toggle-open"><?php echo bpr_icon( 'menu' ); ?></span>
+                <span class="hdr__toggle-close" style="display:none"><?php echo bpr_icon( 'x' ); ?></span>
+            </button>
+
+            <nav class="hdr__nav">
+                <?php wp_nav_menu(['theme_location'=>'primary','container'=>false,'fallback_cb'=>'bpr_fallback_menu']); ?>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main id="content">

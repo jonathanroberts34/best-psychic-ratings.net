@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+
+<header class="hdr">
+    <div class="wrap">
+        <div class="hdr__inner">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="hdr__brand"><?php $__logo_id = has_custom_logo() ? get_theme_mod('custom_logo') : 0; $__logo_src = $__logo_id ? wp_get_attachment_image_src($__logo_id, 'full') : null; if ($__logo_src) : ?><img src="<?php echo esc_url($__logo_src[0]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" class="custom-logo" style="max-height:48px;width:auto;"><?php else : ?>
+                <span class="hdr__star"><?php echo bpr_icon( 'star' ); ?></span>
+                <?php bloginfo( 'name' ); ?>
+            <?php endif; ?></a>
+
+            <button class="hdr__toggle" aria-label="Menu" aria-expanded="false">
+                <span class="hdr__toggle-open"><?php echo bpr_icon( 'menu' ); ?></span>
+                <span class="hdr__toggle-close" style="display:none"><?php echo bpr_icon( 'x' ); ?></span>
+            </button>
+
+            <nav class="hdr__nav">
+                <?php wp_nav_menu(['theme_location'=>'primary','container'=>false,'fallback_cb'=>'bpr_fallback_menu']); ?>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main id="content">
