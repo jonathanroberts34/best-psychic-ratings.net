@@ -1,10 +1,38 @@
-// packages/block-editor/build-module/utils/fit-text-frontend.mjs
-import { store, getElement, getContext } from "@wordpress/interactivity";
+import * as __WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__ from "@wordpress/interactivity";
+/******/ // The require scope
+/******/ var __webpack_require__ = {};
+/******/ 
+/************************************************************************/
+/******/ /* webpack/runtime/define property getters */
+/******/ (() => {
+/******/ 	// define getter functions for harmony exports
+/******/ 	__webpack_require__.d = (exports, definition) => {
+/******/ 		for(var key in definition) {
+/******/ 			if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/hasOwnProperty shorthand */
+/******/ (() => {
+/******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ })();
+/******/ 
+/************************************************************************/
+var __webpack_exports__ = {};
 
-// packages/block-editor/build-module/utils/fit-text-utils.mjs
+;// external "@wordpress/interactivity"
+var x = (y) => {
+	var x = {}; __webpack_require__.d(x, y); return x
+} 
+var y = (x) => (() => (x))
+const interactivity_namespaceObject = x({ ["getContext"]: () => (__WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__.getContext), ["getElement"]: () => (__WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__.getElement), ["store"]: () => (__WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__.store) });
+;// ./node_modules/@wordpress/block-editor/build-module/utils/fit-text-utils.js
 function findOptimalFontSize(textElement, applyFontSize) {
   const alreadyHasScrollableHeight = textElement.scrollHeight > textElement.clientHeight;
-  let minSize = 0;
+  let minSize = 5;
   let maxSize = 2400;
   let bestSize = minSize;
   const computedStyle = window.getComputedStyle(textElement);
@@ -53,12 +81,15 @@ function optimizeFitText(textElement, applyFontSize) {
   return optimalSize;
 }
 
-// packages/block-editor/build-module/utils/fit-text-frontend.mjs
-store("core/fit-text", {
+
+;// ./node_modules/@wordpress/block-editor/build-module/utils/fit-text-frontend.js
+
+
+(0,interactivity_namespaceObject.store)("core/fit-text", {
   callbacks: {
     init() {
-      const context = getContext();
-      const { ref } = getElement();
+      const context = (0,interactivity_namespaceObject.getContext)();
+      const { ref } = (0,interactivity_namespaceObject.getElement)();
       const applyFontSize = (fontSize) => {
         if (fontSize === 0) {
           ref.style.fontSize = "";
@@ -82,3 +113,4 @@ store("core/fit-text", {
     }
   }
 });
+

@@ -1,4 +1,34 @@
-// packages/a11y/build-module/shared/clear.mjs
+/******/ // The require scope
+/******/ var __webpack_require__ = {};
+/******/ 
+/************************************************************************/
+/******/ /* webpack/runtime/define property getters */
+/******/ (() => {
+/******/ 	// define getter functions for harmony exports
+/******/ 	__webpack_require__.d = (exports, definition) => {
+/******/ 		for(var key in definition) {
+/******/ 			if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/hasOwnProperty shorthand */
+/******/ (() => {
+/******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ })();
+/******/ 
+/************************************************************************/
+var __webpack_exports__ = {};
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  m: () => (/* binding */ setup),
+  L: () => (/* reexport */ speak)
+});
+
+;// ./node_modules/@wordpress/a11y/build-module/shared/clear.js
 function clear() {
   const regions = document.getElementsByClassName("a11y-speak-region");
   const introText = document.getElementById("a11y-speak-intro-text");
@@ -10,8 +40,9 @@ function clear() {
   }
 }
 
-// packages/a11y/build-module/shared/filter-message.mjs
-var previousMessage = "";
+
+;// ./node_modules/@wordpress/a11y/build-module/shared/filter-message.js
+let previousMessage = "";
 function filterMessage(message) {
   message = message.replace(/<[^<>]+>/g, " ");
   if (previousMessage === message) {
@@ -21,7 +52,10 @@ function filterMessage(message) {
   return message;
 }
 
-// packages/a11y/build-module/shared/index.mjs
+
+;// ./node_modules/@wordpress/a11y/build-module/shared/index.js
+
+
 function speak(message, ariaLive) {
   clear();
   message = filterMessage(message);
@@ -40,10 +74,13 @@ function speak(message, ariaLive) {
   }
 }
 
-// packages/a11y/build-module/module/index.mjs
-var setup = () => {
+
+;// ./node_modules/@wordpress/a11y/build-module/module/index.js
+
+const setup = () => {
 };
-export {
-  setup,
-  speak
-};
+
+
+var __webpack_exports__setup = __webpack_exports__.m;
+var __webpack_exports__speak = __webpack_exports__.L;
+export { __webpack_exports__setup as setup, __webpack_exports__speak as speak };
